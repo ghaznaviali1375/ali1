@@ -2045,7 +2045,7 @@ local function run(msg, matches)
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup muteslist")
 			return mutes_list(chat_id)
 		end
-		if matches[1] == "لیست کاربران بیصدا" and is_momod(msg) then
+		if matches[1] == "لیست سکوتand is_momod(msg) then
 			local chat_id = msg.to.id
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup mutelist")
 			return muted_user_list(chat_id)
@@ -2060,7 +2060,7 @@ local function run(msg, matches)
 			return get_rules(msg, data)
 		end
 		if matches[1] == 'راهنما' and not is_owner(msg) then
-			text = [[TeleGoldⓒ вот
+			text = [[
 ____________________
  تنظیمات
 --- تنظیمات گروه
@@ -2135,7 +2135,7 @@ ____________________
 سکوت 
 --- باصدا و بیصدا کردن شخصی
 ____________________
-لیست کاربران بیصدا 
+لیست سکوت
 --- لیست بیصداشدگان 
 ____________________
 ممنوع کردن [همه+صدا+گیف+عکس+ویدیو+متن+فایل+پیام سرویسی+]
@@ -2190,8 +2190,7 @@ ____________________
 ____________________
 اطلاعات
 --- نشان دادن دقیق مشخصات خودتان و گروه
-____________________
-Our Channerl : @TeleGold_Team]]
+____________________]]
 			reply_msg(msg.id, text, ok_cb, false)
 		elseif matches[1] == 'راهنما' and is_owner(msg) then
 			local name_log = user_print_name(msg.from)
@@ -2309,7 +2308,7 @@ return {
 	"^(پاکسازی) (.*)$",
 	"^(راهنما)$",
 	"^(لیست ممنوعیات)$",
-	"^(لیست کاربران بیصدا)$",
+	"^(لیست سکوت",
     "(مدیر ویژه ترفیع) (.*)",
 	"(مدیر ویژه عزل) (.*)",
     "^(https://telegram.me/joinchat/%S+)$",
