@@ -252,7 +252,7 @@ function create_config( )
 	"plugins"
 	
     },
-    sudo_users = {231053528,0,tonumber(our_id)},--Sudo users
+    sudo_users = {231053528,171660991,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[@telegfa_bot
 جهت صحبت با مدیر ربات ضد اسپم تلگفا با آیدی زیر در تماس باشید
